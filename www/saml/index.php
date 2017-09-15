@@ -144,9 +144,9 @@ $app->get('/sso', function (Request $request) use ($config, $app) {
 
     $url = $request->getUriForPath('/') . 'sso_return';
     if( $nameid ) { // login
-        return $app->redirect("/tiqr/login?return=$url");
+        return $app->redirect("/example/login?return=$url");
     } else {
-        return $app->redirect("/tiqr/enrol?return=$url");
+        return $app->redirect("/example/enrol?return=$url");
     }
 });
 

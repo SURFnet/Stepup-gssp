@@ -1,6 +1,6 @@
 <div class=pull-right>
-<form action='/tiqr/switch-locale?return_url={{here}}' method=post>
-<select name=tiqr_switch_locale onchange='this.form.submit()'>
+<form action='/example/switch-locale?return_url={{here}}' method=post>
+<select name=switch_locale onchange='this.form.submit()'>
     {% for l in locales %}
     <option value='{{ l }}'{% if locale == l %} selected=true{% endif %}>{{ app.translator.trans(l) }}</option>
     {% endfor %}
