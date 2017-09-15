@@ -162,6 +162,7 @@ $app->get('/sso_return', function (Request $request) use ($config, $app) {
     ));
 
     $request_data = $app['session']->get('Request');
+    $app['session']->set('Request', null);
 
     $rsp_params = array(
         'ResponseID' => newID(),
@@ -182,6 +183,7 @@ $app->get('/sso_return', function (Request $request) use ($config, $app) {
 
     // check username of authenticated user
     $authn = $app['session']->get('authn');
+    $app['session']->set('authn', null); // no SSO
     $username = $authn['username'];
     $nameid = $request_data['nameid'];
     if( $nameid and $username != $nameid ) {
@@ -221,9 +223,6 @@ $app->get('/sso_return', function (Request $request) use ($config, $app) {
     if ($relayState !== NULL) {
         $params['RelayState'] = $relayState;
     }
-
-    $app['session']->set('authn', null); // no SSO
-    $app['session']->set('Request', null);
 
     return $twig->render('autosubmit.html', $params);
 

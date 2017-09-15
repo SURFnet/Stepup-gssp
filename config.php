@@ -1,5 +1,6 @@
 <?php
 
+// local SAML config
 $config = array(
     'keyfile' => dirname(__FILE__) . "/key.pem",
     'certfile' => dirname(__FILE__) . "/cert.pem",

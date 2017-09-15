@@ -1,4 +1,9 @@
 <?php
+
+/*
+ * Dummy SAML SP initiating GSSP requests
+ */
+
 require_once __DIR__.'/../../vendor/autoload.php';
 include_once './../../config.php';
 include_once './../../options.php';

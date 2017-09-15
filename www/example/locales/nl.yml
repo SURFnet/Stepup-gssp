@@ -1,12 +1,12 @@
 en: Engels
 nl: Nederlands
 login:
-    title: Inloggen met Tiqr
+    title: Inloggen
     cancel: Annuleren
     text: Login
     button:
       text: Ok
 
 enrol:
-    title: Registreer nieuw Tiqr-account
+    title: Registreer
     cancel: Annuleren
